@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Ellipse
-import matplotlib.patches as patches
 from reportlab.lib.pagesizes import A4
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image, Table, TableStyle
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
@@ -101,7 +100,7 @@ class BinaryStarAnalysis:
             period_seconds = self.period * 365.25 * 24 * 3600
             
             # Calculate semi-major axis from Kepler's 3rd law
-            a_calculated = ((G * total_mass_kg * period_seconds**2) / (4 * np.pi**2))**(1/3)
+            a_calculated = ((self.G * total_mass_kg * period_seconds**2) / (4 * np.pi**2))**(1/3)
             
             # Update distance based on consistency
             distance_pc = (a_calculated / self.AU) / self.a_angular
