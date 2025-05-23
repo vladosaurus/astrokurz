@@ -1,0 +1,15 @@
+# Binary Star System Analysis - Requirements
+# Core scientific computing
+numpy>=1.21.0
+
+# Plotting and visualization
+matplotlib>=3.5.0
+
+# PDF report generation
+reportlab>=3.6.0
+
+# Optional: For enhanced scientific calculations
+scipy>=1.7.0
+
+# Optional: For better data handling if extending the program
+pandas>=1.3.0
